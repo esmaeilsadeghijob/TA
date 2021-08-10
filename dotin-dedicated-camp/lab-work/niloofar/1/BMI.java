@@ -17,7 +17,6 @@ public static void main(String arg[]){
 }
 
 public static float BMI(float a,float b){
-
 	float bmi= a/(b*b);
 	return bmi;	
 }
