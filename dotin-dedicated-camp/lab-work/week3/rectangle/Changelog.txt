@@ -1,0 +1,24 @@
+﻿╔═══╗─────╔═╗─╔╗─╔═══╗╔═══╗────╔═══╗
+║╔═╗║─────║╔╝╔╝╚╗║╔═╗║║╔═╗║────║╔═╗║
+║╚══╗╔══╗╔╝╚╗╚╗╔╝║╚═╝║║╚═╝║──╔╗║╚═╝║
+╚══╗║║╔╗║╚╗╔╝─║║─╚══╗║║╔═╗║──╠╣║╔╗╔╝
+║╚═╝║║╚╝║─║║──║╚╗╔══╝║║╚═╝║╔╗║║║║║╚╗
+╚═══╝╚══╝─╚╝──╚═╝╚═══╝╚═══╝╚╝╚╝╚╝╚═╝
+   ░░░▒▓██  Soft98.iR ™  ██▓▒░░░
+
+
+2.7.1
+-Improved Windows Defender exclusions for Windows 10 or 8.1
+-Updated DLL Injection Localhost Bypass to use Avrf custom provider
+-Updated KMSEmulator PID Generator for better compatibility between KMS Host OS/pKey
+-Support to detect and skip Windows 10 KMS 2038
+-Fixed Activate button not working if the installed key is not KMS
+-Proper handling for Office 2010 Service Pack 2 when added to ISO
+-Disabled Office ISO Channel Switcher and removed its payload
+-Updated Office Uninstaller scripts
+-Improved Office Click To Run detection
+-Preliminary support for Microsoft Office 2021 Preview
+-Support for Windows Server 2021
+-Updated Keys and Key Checker
+
+
