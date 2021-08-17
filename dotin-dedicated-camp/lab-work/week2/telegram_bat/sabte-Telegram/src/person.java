@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 public abstract class person {
     private String FirstName;
     private String LastName;
@@ -65,9 +65,9 @@ public abstract class person {
         this.status = status;
     }
 
-    abstract public void delete();
-    abstract public void save() ;
-    abstract public void add();
-    abstract public void select();
+    public abstract void delete();
+    public abstract void save() ;
+    public abstract void add();
+    public abstract void select();
 
 }

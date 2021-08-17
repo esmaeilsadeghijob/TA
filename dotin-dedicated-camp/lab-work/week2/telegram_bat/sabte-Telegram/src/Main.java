@@ -3,7 +3,7 @@ import  java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println("firstname ra varde konid");
+        System.out.println("name ra varde konid");
         String name = input.next();
         person n = new person() {
             @Override

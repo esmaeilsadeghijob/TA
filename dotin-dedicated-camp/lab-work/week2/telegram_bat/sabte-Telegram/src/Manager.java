@@ -1,6 +1,16 @@
 
 
-public class admin extends person implements user{
+
+public class Manager extends person implements user {
+    private String managerId;
+
+    public String getManagerId() {
+        return managerId;
+    }
+
+    public void setManagerId(String managerId) {
+        this.managerId = managerId;
+    }
 
     @Override
     public void delete() {
@@ -11,7 +21,7 @@ public class admin extends person implements user{
     public void save() {
 
     }
-    @Override
+
     public void add() {
 
     }
@@ -26,12 +36,10 @@ public class admin extends person implements user{
     public void block() {
 
     }
+
     @Override
     public void unblock() {
 
-    }
-    void Add(){
 
     }
 }
-
