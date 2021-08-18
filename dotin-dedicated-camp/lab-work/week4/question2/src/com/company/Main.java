@@ -13,7 +13,7 @@ public class Main {
                 a[i] = s.nextInt();
             }
         }catch (Exception e){
-            System.out.println("error");
+            System.err.println("error is="+e);
         }
 
 

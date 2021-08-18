@@ -37,5 +37,6 @@ public class Main {
             System.out.println(name.compareTo("ali"));
 
         }else System.out.println("esme vared shode ali ast");
+        System.out.println(name.concat("is a student"));
     }
 }
