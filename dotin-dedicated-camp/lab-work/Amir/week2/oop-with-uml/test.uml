@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.amir.test</OriginalElement>
+  <nodes>
+    <node x="589.0" y="0.0">com.amir.test.Main</node>
+    <node x="208.00000000000003" y="322.0">com.amir.test.Fishes</node>
+    <node x="18.75" y="109.0">com.amir.test.Movement</node>
+    <node x="411.0" y="376.0">com.amir.test.Foods</node>
+    <node x="224.50000000000003" y="0.0">com.amir.test.Animal</node>
+    <node x="0.0" y="322.0">com.amir.test.Birds</node>
+    <node x="206.75000000000003" y="534.0">com.amir.test.Eagle</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.amir.test.Fishes" target="com.amir.test.Animal">
+      <point x="45.75" y="-81.0" />
+      <point x="40.25" y="136.0" />
+    </edge>
+    <edge source="com.amir.test.Birds" target="com.amir.test.Movement">
+      <point x="-47.0" y="-81.0" />
+      <point x="-28.25" y="27.0" />
+    </edge>
+    <edge source="com.amir.test.Birds" target="com.amir.test.Animal">
+      <point x="47.0" y="-81.0" />
+      <point x="141.0" y="302.0" />
+      <point x="264.75" y="302.0" />
+      <point x="-40.25" y="136.0" />
+    </edge>
+    <edge source="com.amir.test.Fishes" target="com.amir.test.Movement">
+      <point x="-45.75" y="-81.0" />
+      <point x="253.75000000000003" y="292.0" />
+      <point x="103.5" y="292.0" />
+      <point x="28.25" y="27.0" />
+    </edge>
+    <edge source="com.amir.test.Eagle" target="com.amir.test.Birds">
+      <point x="-39.5" y="-70.0" />
+      <point x="246.25000000000003" y="509.0" />
+      <point x="94.0" y="509.0" />
+      <point x="0.0" y="81.0" />
+    </edge>
+    <edge source="com.amir.test.Eagle" target="com.amir.test.Foods">
+      <point x="39.5" y="-70.0" />
+      <point x="325.25" y="509.0" />
+      <point x="477.5" y="509.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0999999999999996" x="265.3357100415925" y="371.72727272727286" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
