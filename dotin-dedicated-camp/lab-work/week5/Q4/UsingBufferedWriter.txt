@@ -1,0 +1,2 @@
+Hi.
+This file is written using bufferedWriter.

@@ -1,0 +1,2 @@
+Hi.
+This file is written to be read using FileReader.
