@@ -53,4 +53,9 @@ public class Employee extends HospitalPerson{
     public void setCode(int code) {
         this.code = code;
     }
+
+    @Override
+    public void print(){
+        System.out.println("hospitalemployee");
+    }
 }

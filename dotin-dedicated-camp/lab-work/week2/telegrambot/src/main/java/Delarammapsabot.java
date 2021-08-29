@@ -9,7 +9,7 @@ public class Delarammapsabot extends TelegramLongPollingBot {
         String input = update.getMessage().getText();
         long userId = update.getMessage().getChatId();
 
-        String message = "welcome to esmaeil bot";
+        String message = "welcome to delaram bot";
 
 
         SendMessage sendMessage = new SendMessage();

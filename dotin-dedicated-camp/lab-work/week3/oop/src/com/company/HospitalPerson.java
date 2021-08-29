@@ -46,4 +46,8 @@ public class HospitalPerson {
     public void setCountofvcations(int countofvcations) {
         this.countofvcations = countofvcations;
     }
+
+    public void print(){
+        System.out.println("hospitalpersons");
+    }
 }

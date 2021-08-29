@@ -62,4 +62,9 @@ public abstract class HospitalReception extends Employee implements Administrati
     }
 
     public abstract void guidingPatients();
+
+    @Override
+    public void print(){
+        System.out.println("hospitalreception");
+    }
 }
