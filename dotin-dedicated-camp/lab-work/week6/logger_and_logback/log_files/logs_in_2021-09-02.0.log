@@ -1,0 +1,5 @@
+23:14:55.762 [main] WARN  LogbackTest massage: divide by zero in LogbackTest class
+23:14:58.375 [main] WARN  LogbackTest massage: divide by zero in LogbackTest class
+23:15:10.199 [main] WARN  LogbackTest massage: divide by zero in LogbackTest class
+23:15:16.120 [main] WARN  LogbackTest massage: divide by zero in LogbackTest class
+23:15:17.672 [main] INFO  LogbackTest massage: program finished!
