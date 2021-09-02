@@ -1,4 +1,4 @@
-public class tamrin3 {
+public class NullPointerException {
     public static void main(String[] args) {
         String name1="nilofar azizi";
         String name2=null;
@@ -7,7 +7,7 @@ public class tamrin3 {
           Length(name1);
           Length(name2);
 
-        }catch (NullPointerException e){
+        }catch (java.lang.NullPointerException e){
             System.out.println("null ast ");
 
         }

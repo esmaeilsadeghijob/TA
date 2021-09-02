@@ -1,6 +1,5 @@
 
-
-public class tamrin6 {
+public class Enum {
     public enum food{
      kabab,
      pitza,

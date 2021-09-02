@@ -1,10 +1,10 @@
 
-public class Tamrin1 {
+public class InnerClass {
 
 static String name;
 
     public static void setName(String name) {
-        Tamrin1.name = name;
+        InnerClass.name = name;
     }
 
     public static void saybye(){
@@ -22,7 +22,7 @@ static class inner{
      setName("niloofar");
      inner inner1 = new inner();
      inner1.sayhelloo();
-     Tamrin1.saybye();
+     InnerClass.saybye();
 
     }
 

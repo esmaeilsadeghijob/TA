@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Tamrin5 {
+public class Lock_Unlock {
 
 
     lock mylock=new lock() {
@@ -15,7 +15,7 @@ public class Tamrin5 {
         }
     };
     public static void main(String[] args) {
-        Tamrin5 test=new Tamrin5();
+        Lock_Unlock test=new Lock_Unlock();
         test.start();
     }
     private void start(){
@@ -30,7 +30,7 @@ public class Tamrin5 {
         try {
             int num=r.nextInt(5);
             int result=100/num;
-            System.out.println("natije a"+ result);
+            System.out.println("natije a  "+ result);
         }catch (Exception e){
             e.printStackTrace();
         }finally {

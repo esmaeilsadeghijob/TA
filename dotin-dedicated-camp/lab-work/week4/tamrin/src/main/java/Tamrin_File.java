@@ -5,7 +5,7 @@ import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
 
-public class Tamrin_class {
+public class Tamrin_File {
         public static void main(String[] args) throws IOException {
             File file = new File("C://Users/neloufar/Desktop/n1.txt");
             RandomAccessFile accessFile = new RandomAccessFile(file,"rw");
