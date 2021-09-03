@@ -11,6 +11,8 @@ public class OutputWithFormatter {
     private String lastName;
     private String balance;
 
+    public OutputWithFormatter(){}
+
     public OutputWithFormatter(String accountNumber, String firstName, String lastName, String balance) {
         this.accountNumber = accountNumber;
         this.firstName = firstName;
@@ -74,7 +76,6 @@ public class OutputWithFormatter {
         list.add(getBalance());
 
         return list;
-
 
     }
 
