@@ -13,7 +13,7 @@ public class MrfnBot extends TelegramLongPollingBot {
 
     @Override
     public String getBotToken() {
-        return "1903965516:AAEKVZ5vcyElp1Js-n4zHHydcZU452leMIQ";
+        return "TOKEN";
     }
 
     @Override
