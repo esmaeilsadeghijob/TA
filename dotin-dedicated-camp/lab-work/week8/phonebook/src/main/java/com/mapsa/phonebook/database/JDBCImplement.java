@@ -17,19 +17,19 @@ public class JDBCImplement implements JDBC<String> {
     @Override
     public void create(String phone, String fullName) {
         query = "select exists (select phonenumber from " + tableName + " where phonenumber = '" + phone + "')";
-        System.out.println("The query is: " + query);//TODO log
+//        System.out.println("The query is: " + query);//TODO log
         PreparedStatement statement = connecting(query);//calling method "connecting" to connect and return the statement
         try {
             ResultSet resultSet = statement.executeQuery(query);
             if (resultSet.next()) {
                 if (resultSet.getString(1).equals("0")) { //if the phone number doesn't exist in the phonebook
                     query = "insert into " + tableName + "(fullname, phonenumber) values('" + fullName + "','" + phone + "');";
-                    System.out.println("The query is: " + query);//TODO log
+//                    System.out.println("The query is: " + query);//TODO log
                     PreparedStatement statement2 = connecting(query);
                     statement2.execute();
                     System.out.printf("%nNew person '%s' has been added to the phonebook.%n%n", fullName);
                 } else {
-                    System.out.printf("The number you entered is already in the phonebook.%n%n");
+                    System.out.printf("%nThe number you entered is already in the phonebook.%n%n");
                 }
             }
         } catch (SQLException e) {
@@ -45,21 +45,21 @@ public class JDBCImplement implements JDBC<String> {
     @Override
     public void readByName(String fullName) {
         query = "select exists (select fullname from " + tableName + " where fullname = '" + fullName + "');";
-        System.out.println("The query is: " + query);//TODO log
+//        System.out.println("The query is: " + query);//TODO log
         PreparedStatement statement = connecting(query);
         try {
             ResultSet resultSet = statement.executeQuery(query);
             if (resultSet.next()) {
                 if (resultSet.getString(1).equals("1")) { //if the name exists in the phonebook
                     query = "select phonenumber from " + tableName + " where fullname = '" + fullName + "';";
-                    System.out.println("The query is: " + query);//TODO log
+//                    System.out.println("The query is: " + query);//TODO log
                     PreparedStatement statement2 = connecting(query);
                     ResultSet resultSet2 = statement2.executeQuery(query);
                     if (resultSet2.next()) {
-                        System.out.printf("The number for the name '%s' is:%n%s%n%n", fullName, resultSet2.getString("phonenumber"));
+                        System.out.printf("%nThe number for the name '%s' is:%n%s%n%n", fullName, resultSet2.getString("phonenumber"));
                     }
                 } else {
-                    System.out.printf("The name doesn't exist in the phonebook.%n%n");
+                    System.out.printf("%nThe name doesn't exist in the phonebook.%n%n");
                 }
             }
         } catch (SQLException e) {
@@ -75,21 +75,21 @@ public class JDBCImplement implements JDBC<String> {
     @Override
     public void readByPhoneNumber(String phoneNumber) {
         query = "select exists (select phonenumber from " + tableName + " where phonenumber = '" + phoneNumber + "');";
-        System.out.println("The query is: " + query);//TODO log
+//        System.out.println("The query is: " + query);//TODO log
         PreparedStatement statement = connecting(query);
         try {
             ResultSet resultSet = statement.executeQuery(query);
             if (resultSet.next()) {
                 if (resultSet.getString(1).equals("1")) { //if the phone number exists in the phonebook
                     query = "select fullname from " + tableName + " where phonenumber = '" + phoneNumber + "';";
-                    System.out.println("The query is: " + query);//TODO log
+//                    System.out.println("The query is: " + query);//TODO log
                     PreparedStatement statement2 = connecting(query);
                     ResultSet resultSet2 = statement2.executeQuery(query);
                     if (resultSet2.next()) {
-                        System.out.printf("The number '%s' is for:%n%s%n%n", phoneNumber, resultSet2.getString("fullname"));
+                        System.out.printf("%nThe number '%s' is for:%n%s%n%n", phoneNumber, resultSet2.getString("fullname"));
                     }
                 } else {
-                    System.out.printf("The phone number doesn't exist in the phonebook.%n%n");
+                    System.out.printf("%nThe phone number doesn't exist in the phonebook.%n%n");
                 }
             }
         } catch (SQLException e) {
@@ -113,41 +113,41 @@ public class JDBCImplement implements JDBC<String> {
     @Override
     public void update(String phoneNumber, String fullName) {
         query = "select exists (select phonenumber from " + tableName + " where phonenumber = '" + phoneNumber + "');";
-        System.out.println("The query is: " + query);//TODO log
+//        System.out.println("The query is: " + query);//TODO log
         PreparedStatement statement = connecting(query);
         try {
             ResultSet resultSet = statement.executeQuery(query);
             if (resultSet.next()) {
                 if (resultSet.getString(1).equals("1")) { //if the phone number exists in the phonebook
                     query = "select fullname from " + tableName + " where phonenumber = '" + phoneNumber + "';";
-                    System.out.println("The query is: " + query);//TODO log
+//                    System.out.println("The query is: " + query);//TODO log
                     PreparedStatement statement2 = connecting(query);
                     ResultSet resultSet2 = statement2.executeQuery(query);
                     if (resultSet2.next()) {
                         if (resultSet2.getString("fullname").equals(fullName)) { //if the name for the existing phone number exists
-                            System.out.printf("The information already exist in the phonebook.%n%n");
+                            System.out.printf("%nThe information already exist in the phonebook.%n%n");
                         } else {
                             query = "update " + tableName + " set fullname = '" + fullName + "' where phonenumber = '" + phoneNumber + "';";
-                            System.out.println("The query is: " + query);//TODO log
+//                            System.out.println("The query is: " + query);//TODO log
                             PreparedStatement statement3 = connecting(query);
                             statement3.execute();
-                            System.out.printf("The name for the number '%s' has been updated to:%n%s%n%n", phoneNumber, fullName);
+                            System.out.printf("%nThe name for the number '%s' has been updated to:%n%s%n%n", phoneNumber, fullName);
                         }
                     }
                 }else{ //if the phone number doesn't exist
                     query = "select exists (select fullname from " + tableName + " where fullname = '" + fullName + "');";
-                    System.out.println("The query is: " + query);//TODO log
+//                    System.out.println("The query is: " + query);//TODO log
                     PreparedStatement statement4 = connecting(query);
                     ResultSet resultSet3 = statement4.executeQuery(query);
                     if (resultSet3.next()) {
                         if (resultSet3.getString(1).equals("1")) { //if the name exists in the phonebook
                             query = "update " + tableName + " set phonenumber = '" + phoneNumber + "' where fullname = '" + fullName + "';";
-                            System.out.println("The query is: " + query);//TODO log
+//                            System.out.println("The query is: " + query);//TODO log
                             PreparedStatement statement5 = connecting(query);
                             statement5.execute();
-                            System.out.printf("The number for the name %s has been updated to:%n%s%n%n", fullName, phoneNumber);
+                            System.out.printf("%nThe number for the name %s has been updated to:%n%s%n%n", fullName, phoneNumber);
                         } else { //if the name doesn't exist in the phonebook
-                            System.out.println("Both phone number and full name are new. Please add them to the phonebook before trying to update.");
+                            System.out.println("%nBoth phone number and full name are new. Please add them to the phonebook before trying to update.");
                         }
                     }
                 }
@@ -166,19 +166,19 @@ public class JDBCImplement implements JDBC<String> {
     @Override
     public void deleteByPhoneNumber(String phoneNumber) {
         query = "select exists (select phonenumber from " + tableName + " where phonenumber = '" + phoneNumber + "');";
-        System.out.println("The query is: " + query);//TODO log
+//        System.out.println("The query is: " + query);//TODO log
         PreparedStatement statement = connecting(query);
         try {
             ResultSet resultSet = statement.executeQuery(query);
             if(resultSet.next()) {
                 if (resultSet.getString(1).equals("1")) { //if the phone number exists in the phonebook
                     query = "delete from " + tableName + " where phonenumber = '" + phoneNumber + "';";
-                    System.out.println("The query is: " + query);//TODO log
+//                    System.out.println("The query is: " + query);//TODO log
                     PreparedStatement statement2 = connecting(query);
                     statement2.execute();
-                    System.out.printf("The number '%s' has been deleted.%n%n", phoneNumber);
+                    System.out.printf("%nThe number '%s' has been deleted.%n%n", phoneNumber);
                 } else {
-                    System.out.printf("The phone number doesn't exist in the phonebook.%n%n");
+                    System.out.printf("%nThe phone number doesn't exist in the phonebook.%n%n");
                 }
             }
         }catch(SQLException e){
@@ -195,19 +195,19 @@ public class JDBCImplement implements JDBC<String> {
     @Override
     public void deleteByName(String fullName) {
         query = "select exists (select fullname from " + tableName + " where fullname = '" + fullName + "');";
-        System.out.println("The query is: " + query);//TODO log
+//        System.out.println("The query is: " + query);//TODO log
         PreparedStatement statement = connecting(query);
         try {
             ResultSet resultSet = statement.executeQuery(query);
             if(resultSet.next()) {
                 if (resultSet.getString(1).equals("1")) { //if the name exists in the phonebook
                     query = "delete from " + tableName + " where fullname = '" + fullName + "';";
-                    System.out.println("The query is: " + query);//TODO log
+//                    System.out.println("The query is: " + query);//TODO log
                     PreparedStatement statement2 = connecting(query);
                     statement2.execute();
-                        System.out.printf("The name '%s' has been deleted.%n%n", fullName);
+                        System.out.printf("%nThe name '%s' has been deleted.%n%n", fullName);
                 } else {
-                    System.out.printf("The name doesn't exist in the phonebook.%n%n");
+                    System.out.printf("%nThe name doesn't exist in the phonebook.%n%n");
                 }
             }
         }catch(SQLException e){
@@ -220,7 +220,7 @@ public class JDBCImplement implements JDBC<String> {
     public Map<String,String> getAll(){
         Map<String,String> map = new HashMap<>();
         query = "select * from " + tableName;
-        System.out.println("The query is: " + query);//TODO log
+//        System.out.println("The query is: " + query);//TODO log
         PreparedStatement statement = connecting(query);
         try {
             ResultSet resultSet = statement.executeQuery(query);

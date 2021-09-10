@@ -1,5 +1,6 @@
+com\mapsa\phonebook\database\DBConnection.class
+com\mapsa\phonebook\database\DBConnection$1.class
 com\mapsa\phonebook\database\JDBC.class
 com\mapsa\phonebook\database\DBConnection$DBConnectionInner.class
-com\mapsa\phonebook\database\DBConnection.class
 com\mapsa\phonebook\Main.class
 com\mapsa\phonebook\database\JDBCImplement.class

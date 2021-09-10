@@ -45,14 +45,14 @@ public class Main {
         while (userChoice != 6) {
             switch (userChoice) {
                 case 1:
-                    System.out.println("Please enter the phone number:");
+                    System.out.printf("%nPlease enter the phone number:%n");
                     String number = scanner.nextLine();
                     System.out.println("Please enter the full name:");
                     String fullName = scanner.nextLine();
                     jdbcImplement.create(number, fullName);
                     break;
                 case 2:
-                    System.out.printf("Please enter a number. How do you want to find the person:%n" +
+                    System.out.printf("%nPlease enter a number. How do you want to find the person:%n" +
                             "1) by name.%n" +
                             "2) by phone number.%n");
                     try {
@@ -64,13 +64,13 @@ public class Main {
                     }
                     switch (j) {
                         case 1:
-                            System.out.printf("Please enter the full name:%n");
+                            System.out.printf("%nPlease enter the full name:%n");
                             scanner.nextLine();
                             String findByName = scanner.nextLine();
                             jdbcImplement.readByName(findByName);
                             break;
                         case 2:
-                            System.out.printf("Please enter the phone number:%n");
+                            System.out.printf("%nPlease enter the phone number:%n");
                             scanner.nextLine();
                             String findByNumber = scanner.nextLine();
                             jdbcImplement.readByPhoneNumber(findByNumber);
@@ -78,14 +78,14 @@ public class Main {
                     }
                     break;
                 case 3:
-                    System.out.println("Please enter the phone number:");
+                    System.out.printf("%nPlease enter the phone number:%n");
                     String changingNumber = scanner.nextLine();
                     System.out.println("Please enter the full name:");
                     String changingName = scanner.nextLine();
                     jdbcImplement.update(changingNumber, changingName);
                     break;
                 case 4:
-                    System.out.printf("Please enter a number. How do you want to delete the person:%n" +
+                    System.out.printf("%nPlease enter a number. How do you want to delete the person:%n" +
                             "1) by name.%n" +
                             "2) by phone number.%n");
                     try {
@@ -97,13 +97,13 @@ public class Main {
                     }
                     switch (j) {
                         case 1:
-                            System.out.printf("Please enter the full name:%n");
+                            System.out.printf("%nPlease enter the full name:%n");
                             scanner.nextLine();
                             String deleteByName = scanner.nextLine();
                             jdbcImplement.deleteByName(deleteByName);
                             break;
                         case 2:
-                            System.out.printf("Please enter the phone number:%n");
+                            System.out.printf("%nPlease enter the phone number:%n");
                             scanner.nextLine();
                             String deleteByNumber = scanner.nextLine();
                             jdbcImplement.deleteByPhoneNumber(deleteByNumber);
@@ -118,12 +118,10 @@ public class Main {
                         System.out.printf("%-25s%-20s%n", map.get(phone), phone);
                     System.out.println();
                     break;
-                case 6:
-                    System.out.println("Exiting the program.");
-                    break;
             }
             userChoice = entry();
         }
+        System.out.printf("%nExiting the program.%n");
     }
 }
 
