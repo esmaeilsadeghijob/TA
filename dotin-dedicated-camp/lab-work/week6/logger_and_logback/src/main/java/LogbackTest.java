@@ -11,7 +11,7 @@ public class LogbackTest {
             System.out.print("enter dividend: ");
             int a = scanner.nextInt();
             if (a == -1) {
-                LOGGER.info("program finished!");
+                LOGGER.info("program finished in {} class", LogbackTest.class.getSimpleName());
                 break;
             }
             System.out.print("enter divisor: ");
