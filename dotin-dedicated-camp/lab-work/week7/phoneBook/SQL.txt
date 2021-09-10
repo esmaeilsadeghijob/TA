@@ -1,0 +1,8 @@
+create table SUBSCRIBER
+(
+  id           NUMBER primary key,
+  first_name   VARCHAR2(20) not null,
+  last_name    VARCHAR2(20) not null,
+  phone_number VARCHAR2(11) not null
+)
+create sequence SUBSCRIBER_SEQ start with 1 increment by 1;

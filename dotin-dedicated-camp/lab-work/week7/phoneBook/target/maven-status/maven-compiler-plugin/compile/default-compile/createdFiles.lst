@@ -1,0 +1,5 @@
+com\mapsa\phoneBook\Subscriber.class
+com\mapsa\phoneBook\ConnectionToDB.class
+com\mapsa\phoneBook\FatemehJdbcCrud.class
+com\mapsa\phoneBook\Main.class
+com\mapsa\phoneBook\JdbcCrud.class
