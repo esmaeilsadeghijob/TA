@@ -36,7 +36,7 @@ public class ConnectionDB2 {
         try {
 
             connection = DriverManager.getConnection(url, username, password);
-//            LOG.info("Connected To SQL server ! {}",url);
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
