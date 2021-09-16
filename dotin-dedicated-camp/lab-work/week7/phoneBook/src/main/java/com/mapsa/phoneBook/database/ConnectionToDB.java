@@ -1,4 +1,4 @@
-package com.mapsa.phoneBook;
+package com.mapsa.phoneBook.database;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

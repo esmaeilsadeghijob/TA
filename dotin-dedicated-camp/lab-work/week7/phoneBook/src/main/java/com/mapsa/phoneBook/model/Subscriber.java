@@ -1,19 +1,15 @@
-package com.mapsa.phoneBook;
+package com.mapsa.phoneBook.model;
+
+import com.mapsa.phoneBook.main.Execute;
+import java.util.List;
 
 public class Subscriber {
     private long id;
     private String name;
     private String family;
-    private String phone;
+    private List<Phone> phone;
 
     public Subscriber() {
-    }
-
-    public Subscriber(long id, String name, String family, String phone) {
-        this.id = id;
-        this.name = name;
-        this.family = family;
-        this.phone = phone;
     }
 
     public long getId() {
@@ -43,21 +39,28 @@ public class Subscriber {
         return this;
     }
 
-    public String getPhone() {
+    public List<Phone> getPhone() {
         return phone;
     }
 
-    public Subscriber setPhone(String phone) {
+    public Subscriber setPhone(List<Phone> phone) {
         this.phone = phone;
         return this;
     }
 
     @Override
     public String toString() {
-        return Main.ANSI_YELLOW + "{" +
-                "name='" + name + '\'' +
-                ", family='" + family + '\'' +
-                ", phone='" + phone + '\'' +
-                '}';
+        String res = Execute.ANSI_YELLOW + "{" +
+                "name='" + name + "'" +
+                ", family='" + family + "'"+
+                ", phone={";
+
+        for (Phone phone : this.phone) {
+            res += "[Number='" + phone.getNumber() + "', type ='"+ phone.getPhoneType()+"'] ";
+        }
+
+        res += "}";
+
+        return res;
     }
 }

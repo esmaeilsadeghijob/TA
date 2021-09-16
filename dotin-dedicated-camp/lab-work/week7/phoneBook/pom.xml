@@ -70,7 +70,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.mapsa.phoneBook.Main</mainClass>
+                            <mainClass>com.mapsa.phoneBook.main.Main</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
