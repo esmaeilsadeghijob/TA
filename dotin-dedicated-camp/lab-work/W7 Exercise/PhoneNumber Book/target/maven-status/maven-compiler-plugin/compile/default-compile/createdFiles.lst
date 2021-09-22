@@ -1,0 +1,6 @@
+com\nebula\phonenumberbook\QueryAbility.class
+com\nebula\phonenumberbook\Statements.class
+com\nebula\phonenumberbook\ExecuteApp.class
+com\nebula\phonenumberbook\Person.class
+com\nebula\phonenumberbook\ConnectionManager.class
+com\nebula\phonenumberbook\MainApp.class
