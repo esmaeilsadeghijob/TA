@@ -1,0 +1,3 @@
+com\mapsa\demo\spring\config\AppInitializer.class
+com\mapsa\demo\spring\config\HomeController.class
+com\mapsa\demo\spring\config\WebMvcConfig.class
