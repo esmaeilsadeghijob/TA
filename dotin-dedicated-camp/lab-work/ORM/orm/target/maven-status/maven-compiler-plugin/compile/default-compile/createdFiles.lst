@@ -1,0 +1,10 @@
+com\niloofar\orm\persistence\Table.class
+com\niloofar\orm\persistence\Id.class
+com\niloofar\orm\JDBC\DaoImplementation.class
+com\niloofar\orm\persistence\Coloumn.class
+com\niloofar\orm\MyApplication.class
+com\niloofar\orm\JDBC\TableName.class
+com\niloofar\orm\persistence\ForeignKEY.class
+com\niloofar\orm\JDBC\JDBCSingleton.class
+com\niloofar\orm\JDBC\MyDao.class
+com\niloofar\orm\model\Person.class
