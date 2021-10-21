@@ -2,6 +2,7 @@ package com.mapsa.dotin.dotin.viewModel;
 
 import com.mapsa.dotin.dotin.model.email.EmailStatus;
 import lombok.Getter;
+import  java.lang.*;
 import lombok.Setter;
 
 @Getter
