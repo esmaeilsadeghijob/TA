@@ -3,6 +3,7 @@ package main;
 import sales.product.Product;
 import sales.product.service.impl.ProductServiceImpl;
 import sales.user.User;
+import sales.user.service.UserService;
 import sales.user.service.impl.UserServiceImpl;
 
 import java.util.Scanner;

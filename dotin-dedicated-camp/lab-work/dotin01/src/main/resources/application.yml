@@ -1,0 +1,12 @@
+spring:
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    generate-ddl: true
+  datasource:
+    username: postgres
+    password: admin
+    url: jdbc:postgresql://localhost:5432/mapsa
+    driver-class-name: org.postgresql.Driver

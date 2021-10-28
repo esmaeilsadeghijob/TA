@@ -1,5 +1,6 @@
 package com.mapsa.bubbleSort;
 
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -12,6 +13,7 @@ public class HelloServlet extends HttpServlet {
     private String message;
     private int arrayLength;
     private int[] array;
+
 
     public void init() {
         message = "Please enter your numbers: ";

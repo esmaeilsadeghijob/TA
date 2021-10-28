@@ -1,0 +1,13 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    generate-ddl: true
+    database: postgresql
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/mapsa
+    username: postgres
+    password: admin
+ali.name: "norouzi"
