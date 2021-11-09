@@ -1,8 +1,7 @@
 package com.mapsa.onetoonewithsharedprimarykeysample.controller;
 
-import com.mapsa.onetoonewithsharedprimarykeysample.Parame;
+import com.mapsa.onetoonewithsharedprimarykeysample.PersonParame;
 import com.mapsa.onetoonewithsharedprimarykeysample.dto.PersonDTO;
-import com.mapsa.onetoonewithsharedprimarykeysample.model.Person;
 import com.mapsa.onetoonewithsharedprimarykeysample.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -16,8 +15,8 @@ public class PersonController {
     private PersonService service;
 
     @PostMapping("save")
-    public void save(@RequestBody Parame parame){
-        service.save(parame.getFirstname(), parame.getLastname());
+    public void save(@RequestBody PersonParame personParame){
+        service.save(personParame.getFirstname(), personParame.getLastname());
     }
 
     @GetMapping("all")
