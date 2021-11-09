@@ -13,16 +13,21 @@ public class Person {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    private String name;
+    private String firstname;
+    public String lastname;
 
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "person")
     // mappedBy value points to the relationship owner
     // @oneToOne defines a one-to-one relationship between 2 entities
     private IDCard idCard;
 
-    public Person(String name, IDCard idCard) {
-        this.name = name;
+    public Person(String firstname, String lastname, IDCard idCard) {
+        this.firstname = firstname;
+        this.lastname = lastname;
         this.idCard = idCard;
         this.idCard.setPerson(this);
+    }
+
+    private Person() {
     }
 }
