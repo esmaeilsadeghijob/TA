@@ -1,4 +1,4 @@
-package com.mapsa.initializer;
+package com.mapsa.springDataJPASample;
 
 
 import org.springframework.boot.SpringApplication;

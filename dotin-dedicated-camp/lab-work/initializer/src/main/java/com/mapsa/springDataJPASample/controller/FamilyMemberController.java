@@ -1,7 +1,7 @@
-package com.mapsa.initializer.controller;
+package com.mapsa.springDataJPASample.controller;
 
-import com.mapsa.initializer.model.FamilyMember;
-import com.mapsa.initializer.service.FamilyMemberService;
+import com.mapsa.springDataJPASample.model.FamilyMember;
+import com.mapsa.springDataJPASample.service.FamilyMemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,4 +1,4 @@
-package com.mapsa.initializer;
+package com.mapsa.springDataJPASample;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

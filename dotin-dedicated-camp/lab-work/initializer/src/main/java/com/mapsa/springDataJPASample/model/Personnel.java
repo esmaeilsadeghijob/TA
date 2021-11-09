@@ -1,6 +1,6 @@
-package com.mapsa.initializer.model;
+package com.mapsa.springDataJPASample.model;
 
-import com.mapsa.initializer.enumeration.Gender;
+import com.mapsa.springDataJPASample.enumeration.Gender;
 import lombok.Data;
 
 import javax.persistence.*;

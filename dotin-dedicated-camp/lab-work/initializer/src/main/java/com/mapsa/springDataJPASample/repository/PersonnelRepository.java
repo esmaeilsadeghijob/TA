@@ -1,6 +1,6 @@
-package com.mapsa.initializer.repository;
+package com.mapsa.springDataJPASample.repository;
 
-import com.mapsa.initializer.model.Personnel;
+import com.mapsa.springDataJPASample.model.Personnel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

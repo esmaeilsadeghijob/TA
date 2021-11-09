@@ -1,4 +1,4 @@
-package com.mapsa.initializer.enumeration;
+package com.mapsa.springDataJPASample.enumeration;
 
 import lombok.Getter;
 

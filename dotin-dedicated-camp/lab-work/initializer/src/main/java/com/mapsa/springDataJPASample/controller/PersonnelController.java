@@ -1,7 +1,7 @@
-package com.mapsa.initializer.controller;
+package com.mapsa.springDataJPASample.controller;
 
-import com.mapsa.initializer.model.Personnel;
-import com.mapsa.initializer.service.PersonnelService;
+import com.mapsa.springDataJPASample.model.Personnel;
+import com.mapsa.springDataJPASample.service.PersonnelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,7 +1,7 @@
-package com.mapsa.initializer.service;
+package com.mapsa.springDataJPASample.service;
 
-import com.mapsa.initializer.model.Personnel;
-import com.mapsa.initializer.repository.PersonnelRepository;
+import com.mapsa.springDataJPASample.model.Personnel;
+import com.mapsa.springDataJPASample.repository.PersonnelRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

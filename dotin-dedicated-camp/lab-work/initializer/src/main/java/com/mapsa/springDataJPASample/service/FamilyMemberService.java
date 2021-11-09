@@ -1,7 +1,7 @@
-package com.mapsa.initializer.service;
+package com.mapsa.springDataJPASample.service;
 
-import com.mapsa.initializer.model.FamilyMember;
-import com.mapsa.initializer.repository.FamilyMemberRepository;
+import com.mapsa.springDataJPASample.model.FamilyMember;
+import com.mapsa.springDataJPASample.repository.FamilyMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
