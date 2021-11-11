@@ -11,7 +11,7 @@ import javax.persistence.Entity;
 public class Employee extends Human {
     private String company;
 
-    private Employee() {
+    protected Employee() {
     }
 
     public Employee(String firstname, String lastname, String company) {

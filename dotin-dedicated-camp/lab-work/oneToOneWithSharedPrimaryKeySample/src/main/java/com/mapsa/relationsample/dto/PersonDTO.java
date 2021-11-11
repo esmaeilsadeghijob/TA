@@ -2,16 +2,19 @@ package com.mapsa.relationsample.dto;
 
 import org.springframework.beans.factory.annotation.Value;
 
-public interface PersonDTO {
+import java.io.Serializable;
+
+public interface PersonDTO extends Serializable {
     public Integer getId();
 
     @Value("#{target.firstname + ' ' + target.lastname}")
     public String getFullName();
 
-    public IDCard getIdCard();
+    public IDCardDTO getIdCard();
 
-    public interface IDCard {
+    public interface IDCardDTO extends Serializable {
         public String getCode();
+
         public int getId();
     }
 }

@@ -11,7 +11,6 @@ import java.util.UUID;
 @Setter
 public class IDCard {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @OneToOne(cascade = CascadeType.ALL, optional = false) //defines a one-to-one relationship between 2 entities

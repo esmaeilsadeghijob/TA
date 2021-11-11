@@ -28,6 +28,6 @@ public class Person {
         this.idCard.setPerson(this);
     }
 
-    private Person() {
+    protected Person() {
     }
 }
