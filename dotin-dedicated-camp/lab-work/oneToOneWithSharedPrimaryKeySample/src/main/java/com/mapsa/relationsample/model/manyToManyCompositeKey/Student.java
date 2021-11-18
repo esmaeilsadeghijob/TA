@@ -24,7 +24,8 @@ public class Student {
     private int id;
     private String name;
 
-    protected Student(){}
+    protected Student() {
+    }
 
     public Student(String name) {
         setName(name);

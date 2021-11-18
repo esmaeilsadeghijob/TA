@@ -11,7 +11,7 @@ import javax.persistence.Entity;
 public class Book extends Product {
     private String author;
 
-    private Book () {}
+    protected Book () {}
     public Book(String name, String author) {
         this.author = author;
         setName(name);

@@ -10,7 +10,7 @@ import javax.persistence.Entity;
 @Setter
 public class Pen extends Product {
     private String color;
-    private Pen() {}
+    protected Pen() {}
     public Pen(String color, String name) {
         this.color = color;
         setName(name);
