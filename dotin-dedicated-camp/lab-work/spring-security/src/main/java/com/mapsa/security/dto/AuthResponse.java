@@ -6,7 +6,7 @@ import lombok.experimental.Accessors;
 
 @Data
 @NoArgsConstructor
-@Accessors(chain = true, fluent = true)
+@Accessors(chain = true)
 public class AuthResponse {
     private String username;
     private String jwtToken;

@@ -1,13 +1,10 @@
 spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/mapsa
+    username: postgres
+    password: admin
   jpa:
     hibernate:
       ddl-auto: update
-    show-sql: true
     generate-ddl: true
-    database: h2
-    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
-  datasource:
-    url: jdbc:h2:mem:~/test
-    driver-class-name: org.h2.Driver
-    username: sa
-    password: password
+    show-sql: true

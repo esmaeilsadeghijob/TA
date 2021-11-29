@@ -20,14 +20,15 @@ public class JwtProvider {
     }
 
     private String createToken(Map<String, Object> map, UserDetails userDetails) {
-
+        Date now = new Date(System.currentTimeMillis());
+        Date expiration = new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 2);
         return Jwts.builder()
-                   .setClaims(map)
-                   .setSubject(userDetails.getUsername())
-                   // .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 2)
-                   .setIssuedAt(new Date(System.currentTimeMillis()))
-                   .signWith(SignatureAlgorithm.HS256, SECRET) // private-key
-                   .compact();
+                .setClaims(map)
+                .setSubject(userDetails.getUsername())
+                .setIssuedAt(now)
+                .signWith(SignatureAlgorithm.HS256, SECRET) // private-key
+                .setExpiration(expiration)
+                .compact();
     }
 
     // Validation
@@ -40,7 +41,10 @@ public class JwtProvider {
 
     private Boolean isTokenExpired(String token) {
         Claims claims = extractClaimsFromToken(token);
-        return claims.getExpiration().before(new Date(System.currentTimeMillis()));
+        Date now = new Date(System.currentTimeMillis());
+        Date expiration = claims.getExpiration();
+        boolean result = expiration.before(now);
+        return result;
     }
 
     public Boolean validateToken(String token, UserDetails userDetails) {
